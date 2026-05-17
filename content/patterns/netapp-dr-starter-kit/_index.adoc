@@ -1,44 +1,39 @@
 ---
-title: NetApp DR Starter Kit 
-date: 2026-04-20
+title: NetApp DR Starter Kit
+date: 2026-05-17
 tier: sandbox
-summary: This pattern provides a starter kit for implementing disaster recovery (DR) using NetApp solutions. It includes best practices, reference architectures, and deployment guides to help organizations quickly set up and manage their DR environments with NetApp technologies.
+summary: This pattern deploys a starter kit for implementing disaster recovery (DR) using NetApp solutions.
 rh_products:
 - Red Hat OpenShift Container Platform
-- Red Hat OpenShift External Secrets
 - Red Hat Advanced Cluster Management for Kubernetes
+- Red Hat OpenShift External Secrets Operator
+- Red Hat Virtualization
 - Red Hat OpenShift GitOps
-- Red Hat OpenShift Virtualization
 industries:
 - General
 aliases: /netapp-dr-starter-kit/
+pattern_logo: multicloud-gitops.png
 links:
   github: https://github.com/validatedpatterns-sandbox/netapp-dr-starter-kit
-  install: getting-started
+  install: ndsk-getting-started
+  arch: https://www.redhat.com/architect/portfolio/detail/8-hybrid-multicloud-management-with-gitops
   bugs: https://github.com/validatedpatterns-sandbox/netapp-dr-starter-kit/issues
   feedback: https://docs.google.com/forms/d/e/1FAIpQLScI76b6tD1WyPu2-d_9CCVDr3Fu5jYERthqLKJDUGwqBg7Vcg/viewform
-ci: netapp-dr-starter-kit
+ci: netapp
 ---
 :toc:
 :imagesdir: /images
 :_content-type: ASSEMBLY
 include::modules/comm-attributes.adoc[]
 
-= NetApp DR Starter Kit
+include::modules/ndsk-about-netapp-starter-kit.adoc[leveloffset=+1]
 
-== This pattern is under contstruction and the docs will be added soon!
+//include::modules/mcg-about-multicloud-gitops.adoc[leveloffset=+1]
 
-[WARNING]
-====
-This pattern is currently in the sandbox tier, which means it is a work in progress and may not be fully tested or documented. We welcome contributions and feedback to help improve this pattern and move it to higher tiers.
-==== 
+//include::modules/mcg-architecture.adoc[leveloffset=+1]
 
-//include::modules/trvlops-about.adoc[leveloffset=+1]
+[id="next-steps_ndsk-index"]
+== Next steps
 
-//include::modules/trvlops-architecture.adoc[leveloffset=+1]
-
-//[id="next-steps_trvlops-index"]
-// == Next steps
-
-//* link:getting-started[Deploy the Pattern].
-
+* link:ndsk-getting-started[Get started with the NetApp DR Starter Kit]. 
+* link:ndsk-add-workload[Add workloads to Trident Protect].

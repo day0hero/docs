@@ -1,0 +1,38 @@
+//figure 1 originally
+//.Overview of the solution including the business drivers, management hub, and the clusters under management
+// image::multicloud-gitops/hybrid-multicloud-management-gitops-hl-arch.png[Multicloud Architecture]
+
+// In the following figure, logically, this solution can be viewed as being composed of an automation component, unified management including secrets management, and the clusters under management, all running on top of a user-chosen mixture of on-premise data centers and public clouds.
+
+// figure 2 originally
+// .Logical diagram of hybrid multi-cloud management with GitOps
+// image::multicloud-gitops/logical-diagram.png[Logical Architecture]
+
+[id="about-technology"]
+== About the technology
+
+The following technologies are used in this solution:
+
+https://www.redhat.com/en/technologies/cloud-computing/openshift/try-it[Red Hat OpenShift Platform]::
+An enterprise-ready Kubernetes container platform built for an open hybrid cloud strategy. It provides a consistent application platform to manage hybrid cloud, public cloud, and edge deployments. It delivers a complete application platform for both traditional and cloud-native applications, allowing them to run anywhere. OpenShift has a pre-configured, pre-installed, and self-updating monitoring stack that provides monitoring for core platform components. It also enables the use of external secret management systems, for example, HashiCorp Vault in this case, to securely add secrets into the OpenShift platform.
+
+https://www.redhat.com/en/technologies/cloud-computing/openshift/try-it[Red Hat OpenShift GitOps]::
+A declarative application continuous delivery tool for Kubernetes based on the ArgoCD project. Application definitions, configurations, and environments are declarative and version controlled in Git. It can automatically push the desired application state into a cluster, quickly find out if the application state is in sync with the desired state, and manage applications in multi-cluster environments.
+
+https://www.redhat.com/en/technologies/management/advanced-cluster-management[Red Hat Advanced Cluster Management for Kubernetes]::
+Controls clusters and applications from a single console, with built-in security policies. Extends the value of Red Hat OpenShift by deploying apps, managing multiple clusters, and enforcing policies across multiple clusters at scale.
+
+https://docs.redhat.com/en/documentation/openshift_container_platform/4.21/html/security_and_compliance/external-secrets-operator-for-red-hat-openshift[Red Hat OpenShift External Secrets]::
+A cluster-wide service to deploy and manage the external-secrets application. The external-secrets application integrates with external secrets management systems and performs secret fetching, refreshing, and provisioning within the cluster.
+
+https://www.netapp.com/trident/[NetApp Trident]::
+Trident simplifies provisioning, protecting, and moving Kubernetes apps. Free and open source, it provides automatic provisioning for NetApp ONTAP® storage as persistent volumes for Kubernetes applications.
+
+https://crossplane.io[Crossplane]::
+An open-source Kubernetes add-on that enables platform teams to assemble infrastructure from multiple vendors into a single platform, and then expose self-service APIs to application teams. It provides a consistent way to manage infrastructure across multiple cloud providers and on-premises environments using Kubernetes APIs.
+
+Hashicorp Vault::
+Provides a secure centralized store for dynamic infrastructure and applications across clusters, including over low-trust networks between clouds and data centers.
+
+This solution also uses a variety of _observability tools_ including the Prometheus monitoring and Grafana dashboard that are integrated with OpenShift as well as components of the Observatorium meta-project which includes Thanos and the Loki API.
+(END)

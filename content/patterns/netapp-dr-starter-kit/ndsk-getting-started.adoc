@@ -1,0 +1,20 @@
+---
+title: Getting started
+weight: 10
+aliases: /netapp-dr-starter-kit/ndsk-getting-started/
+---
+
+:toc:
+:imagesdir: /images
+:_content-type: ASSEMBLY
+include::modules/comm-attributes.adoc[]
+
+//include::modules/mcg-deploying-mcg-pattern.adoc[leveloffset=1]
+
+[id="next-steps_ndsk-getting-started"]
+== Next steps
+
+
+
+
+
